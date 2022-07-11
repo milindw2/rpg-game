@@ -8,8 +8,9 @@ import "./index.css";
 import Plane from './components/Plane';
 import Environment from './components/Environment';
 import Orbit from './components/Orbit';
-import Girl from './components/Girl';
+import Archer from './components/Archer'
 import WalkingMan from './components/WalkingMan'
+import CuteGirl from './components/CuteGirl'
 
 
 function App() {
@@ -23,9 +24,11 @@ function App() {
       <ambientLight intensity={0.5}/>
         <Physics>
         <Environment path='/env/scene.gltf'  scale={new Array(3).fill(0.004)}/>
-        <Girl/>
-        <Suspense>
-          <WalkingMan />
+        
+        <Suspense fallback={null}>
+          {/* <WalkingMan /> */}
+          {/* <Archer /> */}
+          <CuteGirl />
         </Suspense>
         </Physics>
         <Orbit />
