@@ -10,6 +10,7 @@ import Environment from './components/Environment';
 import Orbit from './components/Orbit';
 import Archer from './components/Archer'
 import WalkingMan from './components/WalkingMan'
+import Girl from './components/Girl'
 import CuteGirl from './components/CuteGirl'
 
 
@@ -28,7 +29,7 @@ function App() {
         <Suspense fallback={null}>
           {/* <WalkingMan /> */}
           {/* <Archer /> */}
-          <CuteGirl />
+          <Girl />
         </Suspense>
         </Physics>
         <Orbit />
