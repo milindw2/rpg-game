@@ -1,17 +1,11 @@
-import * as THREE from 'three'
-
 import React, { Suspense, useMemo }  from "react";
-import { Canvas, useLoader } from "react-three-fiber";
-import { Physics, useBox, usePlane, useSphere } from "@react-three/cannon";
-
+import { Canvas} from "react-three-fiber";
+import { Physics } from "@react-three/cannon";
 import "./index.css";
-import Plane from './components/Plane';
 import Environment from './components/Environment';
 import Orbit from './components/Orbit';
-import Archer from './components/Archer'
-import WalkingMan from './components/WalkingMan'
 import Girl from './components/Girl'
-import CuteGirl from './components/CuteGirl'
+
 
 
 function App() {
@@ -24,12 +18,10 @@ function App() {
       />
       <ambientLight intensity={0.5}/>
         <Physics>
-        <Environment path='/env/scene.gltf'  scale={new Array(3).fill(0.004)}/>
+        <Environment path='/city/scene.gltf'  scale={new Array(3).fill(0.004)}/>
         
         <Suspense fallback={null}>
-          {/* <WalkingMan /> */}
-          {/* <Archer /> */}
-          <Girl />
+          <Girl  />
         </Suspense>
         </Physics>
         <Orbit />
