@@ -9,7 +9,7 @@ export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/archer.glb')
   const { actions } = useAnimations(animations, group);
-  const [walking, setWalking] = useState(false)
+  // const [walking, setWalking] = useState(false)
   useEffect(()=>{
     
       actions.standingAimWalk.play()
